@@ -1,10 +1,53 @@
-<div class="auth-container">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+</head>
+
+
+    <nav>
+    <ul>
+        <li>
+            <a href="{{ url('/') }}">Home</a>
+        </li>
+
+        
+        <li>
+            <a href="#">User ▾</a>
+            <ul>
+                <li><a href="{{ route('register') }}">Registration</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('orders') }}">Orders history</a></li>
+            </ul>
+        </li>
+
+       
+        <li>
+            <a href="#">Information ▾</a>
+            <ul>
+                <li><a href="{{ route('about') }}">About Us</a></li>
+                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </li>
+
+
+        
+        <li>
+            <a href="#">Support ▾</a>
+            <ul>
+                <li><a href="#">Live chat</a></li>
+                <li><a href="#">Help desk / Feedback</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    </nav>
+
+    <div class="auth-container">
     <div class="auth-box">
 
-    <div class="tab-controls">
-        <button id="login-tab" class="tab active" onclick="showForm('login')">Login</button>
-        <button id="register-tab" class="tab active" onclick="showForm('register')">Register</button>
-    <div>
+    
 
     <form id="login-form" method="POST" action="{{route('login.login')}}" class="auth-form active">
         <h3 class="form-title">Welcome Back</h3>
@@ -26,3 +69,7 @@
     </div>
 </div>
 
+<div class="tab-controls">
+        <button id="login-tab" class="tab active" onclick="showForm('login')">Login</button>
+        <button id="register-tab" class="tab active" onclick="showForm('register')">Register</button>
+    <div>
