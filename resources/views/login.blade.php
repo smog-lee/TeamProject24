@@ -10,7 +10,7 @@
         <h3 class="form-title">Welcome Back</h3>
         
         <label for="register-name">Full Name</label>
-        <input type="text" id="register-name" name="name" placeholder="Joe Biden" required>
+        <input type="text" id="register-name" name="name" placeholder="Joe Biffen" required>
 
         <label for="register-email">Email Address</label>
         <input type="email" id="register-email" name="email" placeholder="joe@outlook.com" required>
@@ -25,3 +25,4 @@
         </form>
     </div>
 </div>
+
