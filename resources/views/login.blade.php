@@ -1,75 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"> 
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 
-    <nav>
-    <ul>
-        <li>
-            <a href="{{ url('/') }}">Home</a>
-        </li>
 
-        
-        <li>
+<body>
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+
+        <li class="dropdown">
             <a href="#">User ▾</a>
-            <ul>
-                <li><a href="{{ route('register') }}">Registration</a></li>
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('orders') }}">Orders history</a></li>
+            <ul class="dropdown-menu">
+                <li><a href="/register">Registration</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/orders">Orders history</a></li>
             </ul>
         </li>
 
-       
-        <li>
+        <li class="dropdown">
             <a href="#">Information ▾</a>
-            <ul>
-                <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="{{ route('contact') }}">Contact Us</a></li>
+            <ul class="dropdown-menu">
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 <li><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
             </ul>
         </li>
 
-
-        
-        <li>
+        <li class="dropdown">
             <a href="#">Support ▾</a>
-            <ul>
+            <ul class="dropdown-menu">
                 <li><a href="#">Live chat</a></li>
                 <li><a href="#">Help desk / Feedback</a></li>
             </ul>
         </li>
     </ul>
+</nav>
 
-    </nav>
 
-    <div class="auth-container">
-    <div class="auth-box">
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" reqiured>
+                <i class='bx bx-user' ></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Password" reqiured>
+                <i class='bx bx-lock-alt' ></i>
+            </div>
 
-    
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
 
-    <form id="login-form" method="POST" action="{{route('login.login')}}" class="auth-form active">
-        <h3 class="form-title">Welcome Back</h3>
-        
-        <label for="register-name">Full Name</label>
-        <input type="text" id="register-name" name="name" placeholder="Joe Biffen" required>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
 
-        <label for="register-email">Email Address</label>
-        <input type="email" id="register-email" name="email" placeholder="joe@outlook.com" required>
-
-        <label for="register-password">Password</label>
-        <input type="password" id="register-password" name="password" placeholder="qwerty" required>
-
-        <label for="register-confirm">Confirm Password</label>
-        <input type="password" id="register-confirm" name="password_confirmation" placeholder="qwerty" required>
-
-        <button type="submit" class="submit-btn">Sign Up</button>
         </form>
     </div>
-</div>
+</body>
 
-<div class="tab-controls">
-        <button id="login-tab" class="tab active" onclick="showForm('login')">Login</button>
-        <button id="register-tab" class="tab active" onclick="showForm('register')">Register</button>
-    <div>
+
+
+</html>
