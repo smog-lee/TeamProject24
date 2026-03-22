@@ -40,7 +40,7 @@
             <a href="#">Support ▾</a>
             <ul>
                 <li><a href="#">Live chat</a></li>
-                <li><a href="#">Help desk / Feedback</a></li>
+                <li><li><a href="{{ url('/help') }}">Help desk / Feedback</a></li></li>
             </ul>
         </li>
     </ul>
